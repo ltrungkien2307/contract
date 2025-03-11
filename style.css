@@ -1,0 +1,129 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%; 
+    max-width: 600px; 
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 50px; 
+    margin: 20px auto; 
+}
+
+
+#pen {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 40px; 
+    transform: translateY(-50%);
+    transition: left 0.2s ease-out;
+}
+#contract {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 50px; 
+    transform: translateY(-50%);
+}
+
+#salaryRange {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 12;
+}
+
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: confetti-fall 3s linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contract-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+.contract-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 0;
+    text-align: center; 
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    #pen {
+        width: 30px; 
+        top: -30px;
+    }
+
+    #contract {
+        width: 40px;
+        top: -30px;
+    }
+
+    .contract-text {
+        font-size: 14px; 
+        margin-left: 0; 
+    }
+}

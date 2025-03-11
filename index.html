@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Tuyển Việc Làm</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Ứng tuyển việc làm</h1>
+        <p>Vui lòng đề xuất mức lương mong muốn</p>
+        <br /><br /><br /><br />
+        <div class="slider-container">
+            <img id="pen" src="./images/pencil.png" alt="Bút" />
+            <input type="range"
+                   id="salaryRange"
+                   min="5000000"
+                   max="100000000"
+                   step="100000"
+                   value="100000000" />
+            <img id="contract" src="./images/contract.png" alt="Hợp đồng" />
+            <p class="contract-text">Hợp đồng</p>
+        </div>
+        <p>Mức lương mong muốn: <span id="salaryValue">100.000.000</span>đ</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
